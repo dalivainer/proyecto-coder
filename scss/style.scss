@@ -1,0 +1,302 @@
+@import "var";
+@mixin divs {
+    height: 300px;
+    padding: 20px;
+    margin: 20px 500px;
+}
+@mixin flex-column {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@mixin flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Body*/ 
+body {
+    font-family: $font-generaltext;
+}
+/*Navegador*/
+.nav-sup {
+    /* fonts and back*/
+    font-weight: 400;
+    text-align: right;
+    list-style-type: none;
+    /* margins and co */
+    border: 0;
+    margin: 20px;
+    padding-right: 20px;
+    height: 70px;
+    /* display */
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .links-nav {
+        font-family: $font-generaltext;
+        text-decoration: none;
+        text-align: end;
+        color: black;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 10px 0 10px;
+    /* Animations y Hover */
+        transition: background-color 1s;
+        transition: border-radius;
+        transition-timing-function:ease;
+    }
+    li {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    } 
+    a {
+        padding: 10px;
+    }
+    a:hover {
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+    }
+    }  
+/*Main*/
+h1 {
+    font-family: $font-lila;
+    padding: 0;
+    margin: 0;
+}
+#lila-gemini {
+    font-size: 20px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-content: flex-end;
+}
+#img-portada {
+    width: 100%;
+}
+#img-responsive {
+    display: none;
+}
+.intro {
+    padding: 10px;
+    h2 {
+        font-weight: 900;
+        text-align: center;
+        margin: 10px;
+    }
+    p {
+        margin: 10px;
+        padding-top: 10px;
+        width: fit-content;
+    }
+}
+.fotos-home {
+    width: 450px;
+}
+.intro {
+    @include divs;
+    @include flex-column;
+}
+.py-5 {
+    padding-top: 0!important;
+}
+/* Newsletter */
+.nletter {
+    @include divs;
+    @include flex-column;
+    background-color: #E4FCF9;
+}
+.rrss {
+    padding: 20px;
+    margin: 20px;
+    ul {
+        @include flex-row;
+        list-style-type: none;
+        margin: 0;
+    }
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    li {
+        margin: 20px;
+    }
+}
+        /* Form */
+        form {
+            margin: 0px!important;
+        }
+        .form-floating {
+            width: auto!important;
+        }
+        .form-control {
+            display: flex!important;
+            justify-content: center;
+            align-content: center;
+            margin: 0;
+        }
+            /* Button */
+            .btn-primary {
+                color: #fff;
+                background-color: rgb(3, 180, 180);
+                border-color:rgb(3, 180, 180);
+            }
+            .form-floating {
+                width: 300px;
+            }
+            button:hover {
+                background-color: black!important;
+                border-color: black!important;
+                color: white;
+            }
+/*Footer*/
+.nav-footer {
+        /* fonts and back*/
+        font-weight: 400;
+        text-align: right;
+        list-style-type: none;
+        background-color: black;
+        display: grid;
+        grid-template-areas: "title menu" "title text";
+        .links-nav {
+            font-family: $font-generaltext;
+            text-decoration: none;
+            text-align: end;
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+            margin: 0 10px 0 10px;
+        }
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        } 
+        a {
+            padding: 10px;
+        } 
+        #div-lila {
+            margin: 20px;
+        }
+        #lila-footer {
+            font-size: 30px;
+            font-family: $font-lila;
+            color: white;
+            text-align: left;
+            @include flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 0;
+            grid-area: title;
+        }
+        .menu-foot {
+            grid-area: menu;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin: 0px;
+        }
+        #div-menu {
+            margin: 20px;
+        }
+        #end-text {
+            color: #A9A9A9;
+            grid-area: text;
+            padding-right: 20px;
+            font-size: 15px;
+            font-style: italic;
+        }
+        }
+/* Media Queries*/
+    /*Mobile*/
+    @media screen and (min-width: 50px) and (max-width: 768px) {
+        /* Header */
+        .nav-header {
+            height: fit-content;
+            flex-basis: content;
+        }
+        .nav-sup {
+            flex-direction: column;
+            height: fit-content;
+        }
+        .links-nav {
+           font-size: 10px!important;
+        }
+        #lila-gemini {
+           font-size: 5px!important;
+        }
+        /* Main */
+        .portada {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        #img-portada {
+            display: none;
+        }
+        #img-responsive {
+            display: block;
+            width: 60%;
+        }
+        .nletter {
+            padding: 0px;
+            margin: 0px;
+        }
+        .py-5 {
+            padding: 0px;
+        }
+        .fotos-home {
+            width: 60%;
+        }
+        .intro {
+            margin: 0px;
+        }
+        .intro div h2 {
+            display: flex;
+            justify-content: flex-start;
+            align-content: left;
+            text-align: left;
+        }
+        .intro div p {
+            display: flex;
+            justify-content: flex-start;
+            align-content: left;
+            text-align: left;
+        }
+        /* Footer */
+        .nav-footer {
+            padding: 0px;
+            display: grid;
+            grid-template-areas: "title menu" "text text";
+        }
+        #lila-footer {
+            grid-area: title;
+        }
+        .menu-foot {
+            grid-area: menu;
+        }
+        #end-text {
+            padding: 0px;
+            margin: 0px;
+            grid-area: text;
+        }
+        #end-text p {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            text-align: center;
+        }
+    }
