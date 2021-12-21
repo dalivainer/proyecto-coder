@@ -116,6 +116,17 @@ h2 {
   text-align: center;
   line-height: 2.0; }
 
+/* Main pages/Galeria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(3, 300px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin: 35px 20px 50px 20px; }
+
 /* Newsletter */
 .nletter {
   height: 300px;
