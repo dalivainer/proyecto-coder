@@ -243,8 +243,8 @@ h2 {
         }
         }
 /* Media Queries*/
-    /*Mobile*/
-    @media screen and (min-width: 50px) and (max-width: 768px) {
+    /*Mobile and tablets*/
+    @media screen and (min-width: 50px) and (max-width: 1245px) {
         /* Header */
         .nav-header {
             height: fit-content;
