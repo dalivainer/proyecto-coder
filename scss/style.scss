@@ -22,6 +22,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+@mixin flex-text-responsive {
+    display: flex;
+    justify-content: flex-start;
+    align-content: left;
+    text-align: left;    
+}
 /*Body*/ 
 body {
     font-family: $font-generaltext;
@@ -253,6 +259,7 @@ h2 {
             font-style: italic;
         }
         }
+/* =================*/
 /* Media Queries*/
     /*Mobile and tablets*/
     @media screen and (min-width: 50px) and (max-width: 1245px) {
@@ -271,7 +278,7 @@ h2 {
         #lila-gemini {
            font-size: 5px!important;
         }
-        /* Main */
+        /* Main Home*/
         .portada {
             display: flex;
             justify-content: center;
@@ -298,16 +305,33 @@ h2 {
             margin: 0px;
         }
         .intro div h2 {
-            display: flex;
-            justify-content: flex-start;
-            align-content: left;
-            text-align: left;
+            @include flex-text-responsive;
         }
         .intro div p {
+            @include flex-text-responsive;
+        }
+        /* Main Gallery */
+        .gallery {
+            /* @import flex-column; */
             display: flex;
-            justify-content: flex-start;
-            align-content: left;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center; 
+            div {
+                height: fit-content;
+            }
+        }
+        img {
+            width: 100vh;
+        }
+        .txt-contacto {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
             text-align: left;
+            .contacto {
+                width: 100%;
+            }
         }
         /* Footer */
         .nav-footer {

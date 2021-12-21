@@ -235,6 +235,7 @@ button:hover {
     font-size: 15px;
     font-style: italic; }
 
+/* =================*/
 /* Media Queries*/
 /*Mobile and tablets*/
 @media screen and (min-width: 50px) and (max-width: 1245px) {
@@ -249,7 +250,7 @@ button:hover {
     font-size: 10px !important; }
   #lila-gemini {
     font-size: 5px !important; }
-  /* Main */
+  /* Main Home*/
   .portada {
     display: flex;
     justify-content: center;
@@ -278,6 +279,24 @@ button:hover {
     justify-content: flex-start;
     align-content: left;
     text-align: left; }
+  /* Main Gallery */
+  .gallery {
+    /* @import flex-column; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .gallery div {
+      height: fit-content; }
+  img {
+    width: 100vh; }
+  .txt-contacto {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left; }
+    .txt-contacto .contacto {
+      width: 100%; }
   /* Footer */
   .nav-footer {
     padding: 0px;
