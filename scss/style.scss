@@ -69,11 +69,17 @@ body {
         color: white;
     }
     }  
-/*Main*/
+/*Main general*/
 h1 {
     font-family: $font-lila;
     padding: 0;
     margin: 0;
+}
+h2 {
+    @include flex-column;
+    font-weight: 600;
+    padding: 20px 10px 10px 10px;
+    margin: 10px;
 }
 #lila-gemini {
     font-size: 20px;
@@ -83,6 +89,7 @@ h1 {
     display: flex;
     align-content: flex-end;
 }
+/* Main pages/Home */
 #img-portada {
     width: 100%;
 }
@@ -112,6 +119,21 @@ h1 {
 .py-5 {
     padding-top: 0!important;
 }
+/* Main pages/Contacto */
+.txt-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+.contacto {
+    list-style-type: none;
+    text-align: center;
+    line-height: 2.0;
+}
 /* Newsletter */
 .nletter {
     @include divs;
@@ -134,7 +156,7 @@ h1 {
         margin: 20px;
     }
 }
-        /* Form */
+        /* NL Form */
         form {
             margin: 0px!important;
         }
