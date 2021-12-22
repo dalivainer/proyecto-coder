@@ -127,6 +127,48 @@ h2 {
   align-content: center;
   margin: 35px 20px 50px 20px; }
 
+/* Main pages/Sobre mi */
+.part-one {
+  background-color: #E4FCF9;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px; }
+  .part-one h3 {
+    padding-bottom: 15px; }
+  .part-one img {
+    padding: 20px; }
+
+.part-two {
+  background-color: #03b4b4;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px; }
+  .part-two .txt-waves {
+    color: white; }
+  .part-two h3 {
+    padding-bottom: 15px; }
+  .part-two img {
+    padding: 20px; }
+
+.part-three {
+  background-color: #e6e2b3;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px; }
+  .part-three h3 {
+    padding-bottom: 15px; }
+  .part-three img {
+    padding: 20px; }
+
 /* Newsletter */
 .nletter {
   height: 300px;
@@ -281,7 +323,6 @@ button:hover {
     text-align: left; }
   /* Main Gallery */
   .gallery {
-    /* @import flex-column; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -297,6 +338,13 @@ button:hover {
     text-align: left; }
     .txt-contacto .contacto {
       width: 100%; }
+  /* Main Sobre mi */
+  .part-one img {
+    width: 40%; }
+  .part-two img {
+    width: 40%; }
+  .part-three img {
+    width: 40%; }
   /* Footer */
   .nav-footer {
     padding: 0px;

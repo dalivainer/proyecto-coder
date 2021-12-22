@@ -151,11 +151,48 @@ h2 {
         align-content: center;
         margin: 35px 20px 50px 20px;
     }
+/* Main pages/Sobre mi */
+    .part-one {
+        background-color: $back-light;
+        @include flex-row;
+        padding: 30px;
+        h3 {
+            padding-bottom: 15px;
+        }
+        img {
+            padding: 20px;
+        }
+    }
+    .part-two {
+        background-color: $back-strong;
+        @include flex-row;
+        padding: 30px;
+        .txt-waves {
+            color: white;
+        }
+        h3 {
+            padding-bottom: 15px;
+        }
+        img {
+            padding: 20px;
+        }
+    }
+    .part-three {
+        background-color: rgb(230, 226, 179);
+        @include flex-row;
+        padding: 30px;
+        h3 {
+            padding-bottom: 15px;
+        }
+        img {
+            padding: 20px;
+        }
+    }
 /* Newsletter */
 .nletter {
     @include divs;
     @include flex-column;
-    background-color: #E4FCF9;
+    background-color: $back-light;
 }
 .rrss {
     padding: 20px;
@@ -189,8 +226,8 @@ h2 {
             /* Button */
             .btn-primary {
                 color: #fff;
-                background-color: rgb(3, 180, 180);
-                border-color:rgb(3, 180, 180);
+                background-color: $back-strong;
+                border-color: $back-strong;
             }
             .form-floating {
                 width: 300px;
@@ -312,7 +349,6 @@ h2 {
         }
         /* Main Gallery */
         .gallery {
-            /* @import flex-column; */
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -332,6 +368,16 @@ h2 {
             .contacto {
                 width: 100%;
             }
+        }
+        /* Main Sobre mi */
+        .part-one img {
+            width: 40%;
+        }
+        .part-two img {
+            width: 40%;
+        }
+        .part-three img {
+            width: 40%;
         }
         /* Footer */
         .nav-footer {
